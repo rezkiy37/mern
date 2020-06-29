@@ -1,0 +1,6 @@
+{
+    "port": 5000,
+    "mongoURI": "mongodb+srv://rezkiy37:RMX37Sumy@mern-khukn.mongodb.net/mern?retryWrites=true&w=majority",
+    "jwtSecret": "rezkiy",
+    "baseUrl": "http://localhost:5000"
+}
