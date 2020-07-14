@@ -10,13 +10,13 @@ app.use('/api/auth', require('./routes/auth.routes'))
 app.use('/api/link', require('./routes/link.routes'))
 app.use('/t', require('./routes/redirect.routes'))
 
-if (procces.env.NODE_ENV === 'production') {
-    app.use('/', express.static(path.join(__dirname, 'client', 'build')))
+// if (procces.env.NODE_ENV === 'production') {
+//     app.use('/', express.static(path.join(__dirname, 'client', 'build')))
 
-    app.get('*', (req, res) => {
-        res.sendfile(path.resolve(__dirname, 'clinet', 'build', 'index.html'))
-    })
-}
+//     app.get('*', (req, res) => {
+//         res.sendfile(path.resolve(__dirname, 'clinet', 'build', 'index.html'))
+//     })
+// }
 
 const PORT = config.get('port') || 5000
 const mongoURI = config.get('mongoURI')
@@ -30,7 +30,7 @@ async function start() {
         })
     } catch (e) {
         console.log('Server Error', e.message)
-        process.exit()
+        //process.exit(1)
     }
 }
 
